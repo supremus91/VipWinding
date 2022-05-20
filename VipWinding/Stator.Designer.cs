@@ -137,10 +137,6 @@
             this.p1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.p1TableAdapter = new VipWinding.VipWindingsDBDataSet_StatoreTableAdapters.P1TableAdapter();
             this.ParGen = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Nuovo = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Elimina = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -224,8 +220,8 @@
             this.Di.Size = new System.Drawing.Size(200, 23);
             this.Di.TabIndex = 17;
             this.Di.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.Di.MouseHover += new System.EventHandler(this.MouseHover);
             this.Di.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.Di.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label4
             // 
@@ -248,8 +244,8 @@
             this.A.Size = new System.Drawing.Size(200, 23);
             this.A.TabIndex = 21;
             this.A.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.A.MouseHover += new System.EventHandler(this.MouseHover);
             this.A.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.A.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label5
             // 
@@ -284,8 +280,8 @@
             this.LC.Size = new System.Drawing.Size(200, 23);
             this.LC.TabIndex = 25;
             this.LC.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.LC.MouseHover += new System.EventHandler(this.MouseHover);
             this.LC.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.LC.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label8
             // 
@@ -308,8 +304,8 @@
             this.LS.Size = new System.Drawing.Size(200, 23);
             this.LS.TabIndex = 27;
             this.LS.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.LS.MouseHover += new System.EventHandler(this.MouseHover);
             this.LS.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.LS.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label9
             // 
@@ -332,8 +328,8 @@
             this.AC.Size = new System.Drawing.Size(200, 23);
             this.AC.TabIndex = 29;
             this.AC.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.AC.MouseHover += new System.EventHandler(this.MouseHover);
             this.AC.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.AC.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label10
             // 
@@ -356,8 +352,8 @@
             this.RI.Size = new System.Drawing.Size(200, 23);
             this.RI.TabIndex = 31;
             this.RI.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.RI.MouseHover += new System.EventHandler(this.MouseHover);
             this.RI.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.RI.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label11
             // 
@@ -380,8 +376,8 @@
             this.GR.Size = new System.Drawing.Size(200, 23);
             this.GR.TabIndex = 33;
             this.GR.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.GR.MouseHover += new System.EventHandler(this.MouseHover);
             this.GR.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.GR.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label12
             // 
@@ -404,8 +400,8 @@
             this.SA.Size = new System.Drawing.Size(200, 23);
             this.SA.TabIndex = 35;
             this.SA.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.SA.MouseHover += new System.EventHandler(this.MouseHover);
             this.SA.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.SA.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label13
             // 
@@ -428,8 +424,8 @@
             this.MT.Size = new System.Drawing.Size(200, 23);
             this.MT.TabIndex = 37;
             this.MT.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.MT.MouseHover += new System.EventHandler(this.MouseHover);
             this.MT.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.MT.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label14
             // 
@@ -452,8 +448,8 @@
             this.PT.Size = new System.Drawing.Size(200, 23);
             this.PT.TabIndex = 39;
             this.PT.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.PT.MouseHover += new System.EventHandler(this.MouseHover);
             this.PT.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.PT.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label15
             // 
@@ -476,8 +472,8 @@
             this.RF.Size = new System.Drawing.Size(200, 23);
             this.RF.TabIndex = 41;
             this.RF.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.RF.MouseHover += new System.EventHandler(this.MouseHover);
             this.RF.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.RF.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label16
             // 
@@ -500,8 +496,8 @@
             this.V.Size = new System.Drawing.Size(200, 23);
             this.V.TabIndex = 43;
             this.V.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.V.MouseHover += new System.EventHandler(this.MouseHover);
             this.V.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.V.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // label17
             // 
@@ -1013,8 +1009,8 @@
             this.LD.Size = new System.Drawing.Size(200, 23);
             this.LD.TabIndex = 63;
             this.LD.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.LD.MouseHover += new System.EventHandler(this.MouseHover);
             this.LD.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.LD.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // N
             // 
@@ -1025,8 +1021,8 @@
             this.N.Size = new System.Drawing.Size(200, 23);
             this.N.TabIndex = 62;
             this.N.MouseEnter += new System.EventHandler(this.MouseHover);
-            this.N.MouseHover += new System.EventHandler(this.MouseHover);
             this.N.MouseLeave += new System.EventHandler(this.MouseLeave);
+            this.N.MouseHover += new System.EventHandler(this.MouseHover);
             // 
             // nBindingSource1
             // 
@@ -1155,10 +1151,6 @@
             // 
             this.ParGen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ParGen.Controls.Add(this.guna2TextBox4);
-            this.ParGen.Controls.Add(this.guna2TextBox3);
-            this.ParGen.Controls.Add(this.guna2TextBox2);
-            this.ParGen.Controls.Add(this.guna2TextBox1);
             this.ParGen.Controls.Add(this.btn_Nuovo);
             this.ParGen.Controls.Add(this.btn_Elimina);
             this.ParGen.Controls.Add(this.guna2DataGridView1);
@@ -1170,114 +1162,6 @@
             this.ParGen.Name = "ParGen";
             this.ParGen.Size = new System.Drawing.Size(1580, 282);
             this.ParGen.TabIndex = 160;
-            // 
-            // guna2TextBox4
-            // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.White;
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "Code4";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(513, 3);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(157, 34);
-            this.guna2TextBox4.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox4.TabIndex = 273;
-            this.guna2TextBox4.Visible = false;
-            this.guna2TextBox4.TextChanged += new System.EventHandler(this.MouseEnter);
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BackColor = System.Drawing.Color.White;
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "Code3";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(346, 3);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(157, 34);
-            this.guna2TextBox3.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox3.TabIndex = 272;
-            this.guna2TextBox3.Visible = false;
-            this.guna2TextBox3.TextChanged += new System.EventHandler(this.MouseEnter);
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.White;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "Code2";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(179, 3);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(157, 34);
-            this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox2.TabIndex = 271;
-            this.guna2TextBox2.Visible = false;
-            this.guna2TextBox2.TextChanged += new System.EventHandler(this.MouseEnter);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.White;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Code1";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(10, 3);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(157, 34);
-            this.guna2TextBox1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox1.TabIndex = 270;
-            this.guna2TextBox1.Visible = false;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.MouseEnter);
             // 
             // btn_Nuovo
             // 
@@ -1371,6 +1255,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
+            this.guna2DataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentDoubleClick);
             this.guna2DataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2DataGridView1_KeyDown);
             this.guna2DataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2DataGridView1_KeyUp);
             // 
@@ -1574,9 +1459,5 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.ComboBox Tolleranza;
         private System.Windows.Forms.RichTextBox TbxTolerance;
-        internal Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        internal Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        internal Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        internal Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
     }
 }

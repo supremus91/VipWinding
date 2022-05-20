@@ -16,7 +16,7 @@ namespace VipWinding.Classi
     //Classe utilizzata per aggiornare gli elementi del database sql
     class UpdateElement
     {
-        public static void Main(ref Guna.UI2.WinForms.Guna2GroupBox gbx, string code1, string code2, string code3, string code4, string DataBaseKey, string TableKey)
+        public static void Main(ref Guna.UI2.WinForms.Guna2GroupBox gbx, string code1, string DataBaseKey, string TableKey)
         {
 
             SqlConnection con = new SqlConnection(Classi.PublicVar.conn_strDB1 + DataBaseKey + Classi.PublicVar.conn_strDB2);
@@ -83,15 +83,14 @@ namespace VipWinding.Classi
 
             }
 
-
-
+            
             //Salvo una nuova riga database dell'avvolgimento
             if (f.W_ans == true)
             {
 
                 string SQL_update = "UPDATE " + DataBaseKey + ".dbo." + TableKey + " SET ";
                 string SQL_write = "";
-                string SQL_where = " WHERE Codice1 = '" + code1 + "' AND " + "Codice2 = '" + code2 + "' AND " + "Codice3 = '" + code3 + "' AND " + "Codice4 = '" + code4 + "'";
+                string SQL_where = " WHERE Codice1 = '" + code1 + "'";
 
                 int item_count = 0;
 

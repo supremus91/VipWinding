@@ -14,7 +14,6 @@ namespace VipWinding
         public MainForm()
         {
             InitializeComponent();
-            //ShowData.Main(ref guna2DataGridView1);
         }
         
         

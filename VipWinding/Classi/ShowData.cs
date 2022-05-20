@@ -20,10 +20,10 @@ namespace VipWinding.Classi
             PublicVar.con = new SqlConnection(PublicVar.conn_strDB1 + DataBaseKey + PublicVar.conn_strDB2);
             Gtab.AllowUserToAddRows = false;
             PublicVar.dt.Clear();
-            PublicVar.adpt = new SqlDataAdapter("select [Data creazione], [Codice1], [Codice2], [Codice3], [Codice4] from " + TableKey, PublicVar.con);
+            PublicVar.adpt = new SqlDataAdapter("select [DataCreazione], [Codice1], [Codice2], [Codice3], [Codice4] from " + TableKey, PublicVar.con);
             PublicVar.adpt.Fill(PublicVar.dt);
             Gtab.DataSource = PublicVar.dt;
-  
+
         }
 
 

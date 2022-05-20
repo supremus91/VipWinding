@@ -17,53 +17,54 @@ namespace VipWinding.Classi
     //Tale riga identificata da 
     class ComboboxFillSql
     {
-
-
-        public static void Main(ref Guna.UI2.WinForms.Guna2GroupBox gbx, string DataBaseKey, string TableKey)
+       public static void Main(ref Guna.UI2.WinForms.Guna2GroupBox gbx, string DataBaseKey, string TableKey)
         {
-
-            foreach (Control item in gbx.Controls)
+           foreach (Control item in gbx.Controls)
             {
-
-                using (SqlConnection sqlConnection = new SqlConnection(PublicVar.conn_strDB1 + DataBaseKey + PublicVar.conn_strDB2))
+                try
                 {
-                   //Ricerco tra tutte le ComboBox dei vari pannelli
-                    if (item is ComboBox)
+                    using (SqlConnection sqlConnection = new SqlConnection(PublicVar.conn_strDB1 + DataBaseKey + PublicVar.conn_strDB2))
                     {
-
-                        ComboBox cbx;
-                        cbx = (ComboBox)gbx.Controls[item.Name];
-                        cbx.Items.Clear();
-
-                        string cbx_name = cbx.Name; 
-
-                        SqlCommand sqlCmd = new SqlCommand("SELECT * FROM " + DataBaseKey + ".dbo." + cbx_name, sqlConnection);
-                        sqlConnection.Open();
-                        SqlDataReader sqlReader = sqlCmd.ExecuteReader();
-
-                        while (sqlReader.Read())
+                        //Ricerco tra tutte le ComboBox dei vari pannelli
+                        if (item is ComboBox)
                         {
-                            cbx.Items.Add(sqlReader[cbx_name].ToString());
+
+                            ComboBox cbx;
+                            cbx = (ComboBox)gbx.Controls[item.Name];
+                            cbx.Items.Clear();
+
+                            string cbx_name = cbx.Name;
+
+                            SqlCommand sqlCmd = new SqlCommand("SELECT * FROM " + DataBaseKey + ".dbo." + cbx_name, sqlConnection);
+                            sqlConnection.Open();
+                            SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+                            while (sqlReader.Read())
+                            {
+                                cbx.Items.Add(sqlReader[cbx_name].ToString());
+                            }
+
+                            sqlReader.Close();
+                            cbx.SelectedItem = MainForm.TabDB[cbx_name];
+                            cbx.Text = MainForm.TabDB[cbx_name].ToString().Trim();
+
                         }
 
-                        sqlReader.Close();
-
-
-
-                        cbx.SelectedItem = MainForm.TabDB[cbx_name];
-                        cbx.Text = MainForm.TabDB[cbx_name].ToString().Trim();
-
+                        //Ricerco tra tutte le ComboBox dei vari pannelli
+                        if (item is RichTextBox)
+                        {
+                            RichTextBox rbx;
+                            rbx = (RichTextBox)gbx.Controls[item.Name];
+                            string rbx_name = rbx.Name;
+                            rbx.Text = MainForm.TabDB[rbx_name].ToString().Trim();
+                        }
                     }
 
-                    //Ricerco tra tutte le ComboBox dei vari pannelli
-                    if (item is RichTextBox)
-                    {
-                        RichTextBox rbx;
-                        rbx = (RichTextBox)gbx.Controls[item.Name];
-                        string rbx_name = rbx.Name;
-                        rbx.Text = MainForm.TabDB[rbx_name].ToString().Trim();
+                }
+                catch (Exception ex)
+                { }
 
-                    }
+                
 
                 }
     
@@ -72,4 +73,4 @@ namespace VipWinding.Classi
         }
         
     }
-}
+

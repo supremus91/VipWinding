@@ -19,11 +19,7 @@ namespace VipWinding.Classi
     class SaveElementSql
     {
 
-        public static void Main(ref Guna.UI2.WinForms.Guna2GroupBox gbx, string DataBaseKey, string TableKey, 
-            ref Guna.UI2.WinForms.Guna2TextBox tbx1, 
-            ref Guna.UI2.WinForms.Guna2TextBox tbx2, 
-            ref Guna.UI2.WinForms.Guna2TextBox tbx3, 
-            ref Guna.UI2.WinForms.Guna2TextBox tbx4)
+        public static void Main(ref Guna.UI2.WinForms.Guna2GroupBox gbx, string DataBaseKey, string TableKey)
         {
 
             ////Atendo la risposta dal form Warning
@@ -88,23 +84,19 @@ namespace VipWinding.Classi
 
             }
 
-
-
-
+            
             //Salvo una nuova riga database dell'avvolgimento
             if (f.W_ans == true)
 
             {
                 SqlConnection con = new SqlConnection(Classi.PublicVar.conn_strDB1 + DataBaseKey + Classi.PublicVar.conn_strDB2);
-                string SQL_write = "INSERT INTO " + DataBaseKey + ".dbo."+ TableKey +"([Data creazione], Codice1, Codice2, Codice3, Codice4, ";
-                String SQL_value = " VALUES ('" + Classi.PublicVar.dateTime.ToString("dd/MM/yyyy") + "', '" + tbx1.Text + "', '" + tbx2.Text + "', '" + tbx3.Text + "', '" + tbx4.Text + "', ";
+                string SQL_write = "INSERT INTO " + DataBaseKey + ".dbo."+ TableKey +"(DataCreazione, ";
+                String SQL_value = " VALUES ('" + Classi.PublicVar.dateTime.ToString("dd/MM/yyyy") + "', ";
                 int item_count = 0;
                
                 foreach (Control item in gbx.Controls)
                 {
-
-
-                    //Ricerco tra tutte le ComboBox dei vari pannelli
+                 //Ricerco tra tutte le ComboBox dei vari pannelli
                     if (item is ComboBox)
                     {
                         ComboBox cbx;
@@ -173,67 +165,67 @@ namespace VipWinding.Classi
 
 
 
-            //Aggiorno la riga database dell'avvolgimento
-            if (f.W_ans == true)
+            ////Aggiorno la riga database dell'elemento
+            //if (f.W_ans == true)
 
-            {
-                SqlConnection con = new SqlConnection(Classi.PublicVar.conn_strDB1 + DataBaseKey + Classi.PublicVar.conn_strDB2);
-                string SQL_update = "UPDATE " + DataBaseKey + ".dbo." + TableKey + " SET ";
-                string SQL_write = "";
-                string SQL_where = " WHERE Codice1 = '" + tbx1 + "' AND " + "Codice1 = '" + tbx2 + "' AND " + "Codice1 = '" + tbx3 + "' AND " + "Codice1 = '" + tbx4;
+            //{
+            //    SqlConnection con = new SqlConnection(Classi.PublicVar.conn_strDB1 + DataBaseKey + Classi.PublicVar.conn_strDB2);
+            //    string SQL_update = "UPDATE " + DataBaseKey + ".dbo." + TableKey + " SET ";
+            //    string SQL_write = "";
+            //    string SQL_where = " WHERE Codice1 = '" + Codice1;
 
-                int item_count = 0;
+            //    int item_count = 0;
             
-                foreach (Control item in gbx.Controls)
-                {
+            //    foreach (Control item in gbx.Controls)
+            //    {
 
-                    //Ricerco tra tutte le ComboBox dei vari pannelli
-                    if (item is ComboBox)
-                    {
-                        ComboBox cbx;
-                        cbx = (ComboBox)gbx.Controls[item.Name];
-                        string cbx_name = cbx.Name;
-                        string cbx_sel = cbx.Text;
+            //        //Ricerco tra tutte le ComboBox dei vari pannelli
+            //        if (item is ComboBox)
+            //        {
+            //            ComboBox cbx;
+            //            cbx = (ComboBox)gbx.Controls[item.Name];
+            //            string cbx_name = cbx.Name;
+            //            string cbx_sel = cbx.Text;
 
-                        if (item_count < Classi.PublicVar.DB_count - 5)
-                        {
-                            SQL_write = SQL_write + item.Name + " = '" + cbx_sel + "', ";
-                        }
-                        else
-                        {
-                            SQL_write = SQL_write + item.Name + " = '" + cbx_sel + "'";
-                        }
+            //            if (item_count < Classi.PublicVar.DB_count - 5)
+            //            {
+            //                SQL_write = SQL_write + item.Name + " = '" + cbx_sel + "', ";
+            //            }
+            //            else
+            //            {
+            //                SQL_write = SQL_write + item.Name + " = '" + cbx_sel + "'";
+            //            }
 
-                        item_count++;
-                    }
+            //            item_count++;
+            //        }
 
 
 
-                    //Se l'elemento è una richtextbox
-                    if (item is RichTextBox)
-                    {
-                        RichTextBox rbx;
-                        rbx = (RichTextBox)gbx.Controls[item.Name];
-                        string rbx_name = rbx.Name;
-                        string rbx_sel = rbx.Text;
+            //        //Se l'elemento è una richtextbox
+            //        if (item is RichTextBox)
+            //        {
+            //            RichTextBox rbx;
+            //            rbx = (RichTextBox)gbx.Controls[item.Name];
+            //            string rbx_name = rbx.Name;
+            //            string rbx_sel = rbx.Text;
 
-                        if (item_count < Classi.PublicVar.DB_count - 5)
-                        {
-                            SQL_write = SQL_write + item.Name + " = '" + rbx_sel + ", ";
-                        }
-                        else
-                        {
-                            SQL_write = SQL_write + item.Name + " = '" + rbx_sel + "'";
-                        }
+            //            if (item_count < Classi.PublicVar.DB_count - 5)
+            //            {
+            //                SQL_write = SQL_write + item.Name + " = '" + rbx_sel + ", ";
+            //            }
+            //            else
+            //            {
+            //                SQL_write = SQL_write + item.Name + " = '" + rbx_sel + "'";
+            //            }
 
-                        item_count++;
-                    }
+            //            item_count++;
+            //        }
 
-                }
+            //    }
 
-                SQL_update = SQL_update + SQL_write + SQL_where;
+            //    SQL_update = SQL_update + SQL_write + SQL_where;
 
-            }
+            //}
 
 
         }

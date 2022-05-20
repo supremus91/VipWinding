@@ -13,17 +13,19 @@ namespace VipWinding.Classi
     class DeleteElementSql
     {
 
-        public static void Main(String cod1, String cod2, String cod3, String cod4, String DataBase, String TableName)
+        public static void Main(String Codice1, String DataBase, String TableName)
         {
 
             //Atendo la risposta dal form Warning
             WarningDel f = new WarningDel();
             f.ShowDialog();
 
-            //Salvo una nuova riga database dell'avvolgimento
+            //Processo di cancellazione riga dal database
             if (f.W_ans == true)
             {
-                string sql = "DELETE FROM " + TableName + " WHERE Codice1 = '" + cod1 + "' AND " + "Codice2 = '" + cod2 + "' AND " + "Codice3 = '" + cod3 + "' AND " + "Codice4 = '" + cod4 + "'";
+
+                //Cancello una nuova riga database dell'avvolgimento
+                string sql = "DELETE FROM " + TableName + " WHERE Codice1 = '" + Codice1 + "'";
 
                 SqlConnection con = new SqlConnection(PublicVar.conn_strDB1 + DataBase + PublicVar.conn_strDB2);
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -33,6 +35,24 @@ namespace VipWinding.Classi
                 try
                 {
                     cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+
+                }
+                con.Close();
+
+                
+
+                //Cancello una nuova riga database dell'avvolgimento
+               sql = "DELETE FROM " + DataBase + ".dbo.Fornitori WHERE CodiceVip = '" + Codice1 + "'";
+               SqlCommand cmd1 = new SqlCommand(sql, con);
+
+                con.Open();
+
+                try
+                {
+                    cmd1.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {

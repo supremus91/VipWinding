@@ -32,7 +32,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>VipWinding.htm</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -94,12 +94,15 @@
   <ItemGroup>
     <Compile Include="Classi\CodeChange.cs" />
     <Compile Include="Classi\ComboboxFillSql.cs" />
+    <Compile Include="Classi\ComboboxFillSqlNewName.cs" />
+    <Compile Include="Classi\LoadDataNewName.cs" />
     <Compile Include="Classi\NewElement.cs" />
     <Compile Include="Classi\PictureboxChangeCbx.cs" />
     <Compile Include="Classi\PictureboxLeaveCbx.cs" />
     <Compile Include="Classi\SaveElementSql.cs" />
     <Compile Include="Classi\ShowData.cs" />
     <Compile Include="Classi\UpdateElement.cs" />
+    <Compile Include="Classi\UpdateNewNameFornitori.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
