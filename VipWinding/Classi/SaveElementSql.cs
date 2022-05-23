@@ -56,7 +56,7 @@ namespace VipWinding.Classi
                         }
 
                         //nel ciclo di ricerca della ComboBox non ho trovato un valore uguale a quello proposto --> lo aggiungo al database
-                        if (find == false && (cbx.Items.Count != 0 || cbx.Text.Trim() != ""))
+                        if (find == false && cbx.Text.Trim() != "")
                         {
                             SqlConnection con = new SqlConnection(Classi.PublicVar.conn_strDB1 + DataBaseKey + Classi.PublicVar.conn_strDB2);
                             SqlCommand cmd = new SqlCommand("INSERT INTO " + DataBaseKey + ".dbo." + item.Name + "(" + item.Name + ") values(@" + item.Name + ")", con);

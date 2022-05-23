@@ -95,6 +95,7 @@
     <Compile Include="Classi\CodeChange.cs" />
     <Compile Include="Classi\ComboboxFillSql.cs" />
     <Compile Include="Classi\ComboboxFillSqlNewName.cs" />
+    <Compile Include="Classi\LabelChangeCbx.cs" />
     <Compile Include="Classi\LoadDataNewName.cs" />
     <Compile Include="Classi\NewElement.cs" />
     <Compile Include="Classi\PictureboxChangeCbx.cs" />

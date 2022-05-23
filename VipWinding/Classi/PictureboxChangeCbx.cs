@@ -9,9 +9,7 @@ namespace VipWinding.Classi
 {
     class PictureboxChangeCbx
     {
-
-
-
+        
         public static void Main(ref System.Windows.Forms.ComboBox cbx, ref Guna.UI2.WinForms.Guna2PictureBox pbx, string KeyCbxName)
          {
 

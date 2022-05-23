@@ -24,8 +24,7 @@ namespace VipWinding
         public Stator()
         {
             InitializeComponent();
-            
-            ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+            ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
 
             //Nel caso non ci siano elementi nel database il codice va in errore
             try
@@ -35,8 +34,7 @@ namespace VipWinding
             }
             catch (Exception ex)
             { }
-
-
+            PartName.Text = "";
         }
         
         public void Salva_DB_Click(object sender, EventArgs e)
@@ -49,14 +47,14 @@ namespace VipWinding
                 try
                 {
                     //Caso in cui la datagrid sia vuota
-                  if (guna2DataGridView1.Rows.Count == 0)
+                  if (Guna2DataGridView1.Rows.Count == 0)
                     {
                         SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
-                        ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+                        ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
                     }
                   else
                     {
-                        UpdateElement.Main(ref guna2GroupBox1, guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim(), DataBaseKey, TableKey);
+                        UpdateElement.Main(ref guna2GroupBox1, Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString().Trim(), DataBaseKey, TableKey);
                     }
 
                 }
@@ -67,10 +65,11 @@ namespace VipWinding
             else // Caso di nuovo ventilatore
             {
                 SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
-                ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+                ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
             }
           
             PublicVar.NewFan = false;
+
         }
         
         //*********************************Compilo le combobox contenute in guna2groupbox*******************************
@@ -102,13 +101,13 @@ namespace VipWinding
         {
             try
             {
-                if (guna2DataGridView1.Rows.Count == 0)
+                if (Guna2DataGridView1.Rows.Count == 0)
                 {
                     ReadColumnsDatabase.Main("0", DataBaseKey, TableKey);
                 }
                 else
                 {
-                    ReadColumnsDatabase.Main(guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
+                    ReadColumnsDatabase.Main(Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
                 }
  
             }
@@ -128,36 +127,35 @@ namespace VipWinding
    
             if (f.W_ans == false)
             { 
-              NewElement.Main(ref guna2GroupBox1, ref guna2DataGridView1);
+              NewElement.Main(ref guna2GroupBox1, ref Guna2DataGridView1);
               SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
-              ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+              ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
             }
             else
             {
               SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
-              ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+              ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
             }
          
 
         }
 
     
-
         private void btn_Elimina_Click(object sender, EventArgs e)
         {
             try
             {
-                DeleteElementSql.Main(guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
+                DeleteElementSql.Main(Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
             }
             catch (Exception ex)
             { }
 
-            ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+            ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
 
 
             //Quando elimino una riga poi seleziono in automatico la prima
             try
-            { guna2DataGridView1.Rows[0].Selected = true;}
+            { Guna2DataGridView1.Rows[0].Selected = true;}
             catch (Exception ex)
             { }
             
@@ -167,7 +165,10 @@ namespace VipWinding
         private void MouseHover(object sender, EventArgs e)
         {
             ComboBox cbx = (ComboBox)sender;
-            PictureboxChangeCbx.Main(ref cbx, ref guna2PictureBox1, FormName);  
+            PictureboxChangeCbx.Main(ref cbx, ref guna2PictureBox1, FormName);
+            Label lb;
+            lb = (Label)guna2GroupBox1.Controls["lb_" + cbx.Name];
+            LabelChangeCbx.Main(ref cbx, ref guna2PictureBox1, ref PartName, lb.Text);
         }
 
         private void MouseEnter(object sender, EventArgs e)
@@ -179,6 +180,7 @@ namespace VipWinding
         private void MouseLeave(object sender, EventArgs e)
         {
             PictureboxLeaveCbx.Main(ref guna2PictureBox1, FormName);
+            PartName.Text = "";
         }
 
         private void Tolleranza_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,13 +213,13 @@ namespace VipWinding
             try
             {
                 //Apro l'interfaccia di inserimento nome 
-                NewName f1 = new NewName(guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), TipoComponente, DataBaseKey, TableKey, 
-                    guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[2].Value.ToString(),
-                    guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[3].Value.ToString(),
-                guna2DataGridView1.Rows[guna2DataGridView1.CurrentRow.Index].Cells[4].Value.ToString());
+                NewName f1 = new NewName(Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), TipoComponente, DataBaseKey, TableKey, 
+                    Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[2].Value.ToString(),
+                    Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[3].Value.ToString(),
+                Guna2DataGridView1.Rows[Guna2DataGridView1.CurrentRow.Index].Cells[4].Value.ToString());
 
                 f1.ShowDialog();
-                ShowData.Main(ref guna2DataGridView1, DataBaseKey, TableKey);
+                ShowData.Main(ref Guna2DataGridView1, DataBaseKey, TableKey);
             }
             catch (Exception ex)
             { }
