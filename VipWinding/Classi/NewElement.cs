@@ -33,6 +33,18 @@ namespace VipWinding.Classi
                     cbx.Text = "";
                     dtg.ClearSelection();
 
+                    if (cbx.Name == "Tolleranza")
+                    { cbx.Text = "Standard"; }
+
+                }
+            
+                //Ricerco tra tutte le ComboBox dei vari pannelli
+                if (item is RichTextBox)
+                {
+                    RichTextBox tbx;
+                    tbx = (RichTextBox)gbx.Controls[item.Name];
+                    tbx.Text = "";
+                    tbx.Visible = false;
                 }
 
             }

@@ -48,6 +48,8 @@ namespace VipWinding.Classi
                             cbx.SelectedItem = MainForm.TabDB[cbx_name];
                             cbx.Text = MainForm.TabDB[cbx_name].ToString().Trim();
 
+                            if (cbx.Name == "Tolleranza" && cbx.Text =="")
+                            { cbx.Text = "Standard"; }
                         }
 
                         //Ricerco tra tutte le ComboBox dei vari pannelli
@@ -57,6 +59,10 @@ namespace VipWinding.Classi
                             rbx = (RichTextBox)gbx.Controls[item.Name];
                             string rbx_name = rbx.Name;
                             rbx.Text = MainForm.TabDB[rbx_name].ToString().Trim();
+                            if (rbx.Text.Trim() != "")
+                                { rbx.Visible = true; }
+                            else
+                            { rbx.Visible = false; }
                         }
                     }
 

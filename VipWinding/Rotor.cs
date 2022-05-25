@@ -13,18 +13,18 @@ using VipWinding.Classi;
 namespace VipWinding
 {
 
-   
-    public partial class Stator : Form
+
+    public partial class Rotor : Form
     {
-        public static string FormName = "Stator";
+        public static string FormName = "Rotor";
         public static string DataBaseKey = "Vip" + FormName + "DB";
         public static string TableKey = "Vip" + FormName;
-        public static string TipoComponente = "Statore";
+        public static string TipoComponente = "Rotore";
 
-        public Stator()
+        public Rotor()
         {
             InitializeComponent();
-            ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+            ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
 
             //Nel caso non ci siano elementi nel database il codice va in errore
             try
@@ -35,26 +35,27 @@ namespace VipWinding
             catch (Exception ex)
             { }
             PartName.Text = "";
+      
         }
-        
+
         public void Salva_DB_Click(object sender, EventArgs e)
         {
 
 
-            if(PublicVar.NewFan == false) // Caso di aggiornamento
+            if (PublicVar.NewFan == false) // Caso di aggiornamento
             {
 
                 try
                 {
                     //Caso in cui la datagrid sia vuota
-                  if (Stator_GridView.Rows.Count == 0)
+                    if (Rotor_GridView.Rows.Count == 0)
                     {
                         SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,false);
-                        ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+                        ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
                     }
-                  else
+                    else
                     {
-                        UpdateElement.Main(ref guna2GroupBox1, Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[1].Value.ToString().Trim(), DataBaseKey, TableKey);
+                        UpdateElement.Main(ref guna2GroupBox1, Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[1].Value.ToString().Trim(), DataBaseKey, TableKey);
                     }
 
                 }
@@ -64,30 +65,30 @@ namespace VipWinding
             }
             else // Caso di nuovo componente
             {
-                SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,false);
-                ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+                SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,true);
+                ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
             }
-          
+
             PublicVar.NewFan = false;
 
         }
-        
+
         //*********************************Compilo le combobox contenute in guna2groupbox*******************************
-        private void Stator_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DB_Read_columns();
-            ComboboxFillSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
-        }
-
-        
-        private void Stator_GridView_KeyDown(object sender, KeyEventArgs e)
+        private void Rotor_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DB_Read_columns();
             ComboboxFillSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
         }
 
 
-        private void Stator_GridView_KeyUp(object sender, KeyEventArgs e)
+        private void Rotor_GridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            DB_Read_columns();
+            ComboboxFillSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
+        }
+
+
+        private void Rotor_GridView_KeyUp(object sender, KeyEventArgs e)
         {
             DB_Read_columns();
             ComboboxFillSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey);
@@ -95,26 +96,27 @@ namespace VipWinding
         }
         //*****************************************************************************************************************
 
-            
+
         public void DB_Read_columns()
         {
             try
             {
-                if (Stator_GridView.Rows.Count == 0)
+                if (Rotor_GridView.Rows.Count == 0)
                 {
                     ReadColumnsDatabase.Main("0", DataBaseKey, TableKey);
                 }
                 else
                 {
-                    ReadColumnsDatabase.Main(Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
+                    ReadColumnsDatabase.Main(Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
                 }
- 
+
             }
             catch (Exception ex)
             { }
+
         }
 
-        
+
         private void btn_Nuovo_Click(object sender, EventArgs e)
         {
             PublicVar.NewFan = true;
@@ -122,41 +124,42 @@ namespace VipWinding
             WarningNew f = new WarningNew();
             f.ShowDialog();
 
-   
+
             if (f.W_ans == false)
-            { 
-              NewElement.Main(ref guna2GroupBox1, ref Stator_GridView);
-              SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,true);
-              ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+            {
+                NewElement.Main(ref guna2GroupBox1, ref Rotor_GridView);
+                SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,true);
+                ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
             }
             else
             {
-              SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,true);
-              ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+                SaveElementSql.Main(ref guna2GroupBox1, DataBaseKey, TableKey,true);
+                ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
             }
+
+
         }
 
-    
+
         private void btn_Elimina_Click(object sender, EventArgs e)
         {
             try
             {
-                DeleteElementSql.Main(Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
+                DeleteElementSql.Main(Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[1].Value.ToString(), DataBaseKey, TableKey);
             }
             catch (Exception ex)
             { }
 
-            ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+            ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
 
 
             //Quando elimino una riga poi seleziono in automatico la prima
             try
-            { Stator_GridView.Rows[0].Selected = true;}
+            { Rotor_GridView.Rows[0].Selected = true; }
             catch (Exception ex)
             { }
-            
-        }
 
+        }
         
         private void MouseHover(object sender, EventArgs e)
         {
@@ -182,6 +185,7 @@ namespace VipWinding
             PartName.Text = "";
         }
 
+
         private void Tolleranza_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -206,23 +210,23 @@ namespace VipWinding
 
         }
 
-        
-        private void Stator_GridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void Rotor_GridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 //Apro l'interfaccia di inserimento nome 
-                NewName f1 = new NewName(Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[1].Value.ToString(), TipoComponente, DataBaseKey, TableKey, 
-                    Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[2].Value.ToString(),
-                    Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[3].Value.ToString(),
-                Stator_GridView.Rows[Stator_GridView.CurrentRow.Index].Cells[4].Value.ToString());
+                NewName f1 = new NewName(Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[1].Value.ToString(), TipoComponente, DataBaseKey, TableKey,
+                    Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[2].Value.ToString(),
+                    Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[3].Value.ToString(),
+                Rotor_GridView.Rows[Rotor_GridView.CurrentRow.Index].Cells[4].Value.ToString());
 
                 f1.ShowDialog();
-                ShowData.Main(ref Stator_GridView, DataBaseKey, TableKey);
+                ShowData.Main(ref Rotor_GridView, DataBaseKey, TableKey);
             }
             catch (Exception ex)
             { }
-            
+
         }
 
     }

@@ -41,11 +41,7 @@ namespace VipWinding.Classi
                         }
 
                         sqlReader.Close();
-                        //cbx.SelectedItem = MainForm.TabDB["Fornitore"];
-                        //cbx.Text = MainForm.TabDB["Fornitore"].ToString().Trim();
-
                     }
-
 
                 }
 

@@ -25,6 +25,7 @@ namespace VipWinding.Classi
         public static DataTable dt = new DataTable();
         public static SqlDataAdapter adpt;
         public static SqlConnection con;
+        public static Form FormComponent;
         public static bool NewFan;
         
     }

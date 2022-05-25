@@ -118,6 +118,78 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Corona" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_D1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_D1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_D2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_D2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_H" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_H.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_Ha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_Ha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_Hp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_Hp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_Na" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_Na.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corona_Np" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corona_Np.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Corone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Corone.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_ac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_ac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_de" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_de.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_di" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_di.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_fv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_fv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_ld" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_ld.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rotor_ri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rotor_ri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Stator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stator.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

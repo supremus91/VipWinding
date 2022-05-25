@@ -32,7 +32,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>VipWinding.htm</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -92,7 +92,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classi\CodeChange.cs" />
     <Compile Include="Classi\ComboboxFillSql.cs" />
     <Compile Include="Classi\ComboboxFillSqlNewName.cs" />
     <Compile Include="Classi\LabelChangeCbx.cs" />
@@ -104,6 +103,12 @@
     <Compile Include="Classi\ShowData.cs" />
     <Compile Include="Classi\UpdateElement.cs" />
     <Compile Include="Classi\UpdateNewNameFornitori.cs" />
+    <Compile Include="Corona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Corona.Designer.cs">
+      <DependentUpon>Corona.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +126,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rotor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rotor.Designer.cs">
+      <DependentUpon>Rotor.cs</DependentUpon>
+    </Compile>
     <Compile Include="VipWindingsDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,6 +187,9 @@
     <Compile Include="Stator.Designer.cs">
       <DependentUpon>Stator.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Corona.resx">
+      <DependentUpon>Corona.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +206,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rotor.resx">
+      <DependentUpon>Rotor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WarningDel.resx">
       <DependentUpon>WarningDel.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +312,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Electrict_m.ico" />
+    <None Include="Resources\Corona_Np.png" />
+    <None Include="Resources\Corona_Na.png" />
+    <None Include="Resources\Corona_Hp.png" />
+    <None Include="Resources\Corona_Ha.png" />
+    <None Include="Resources\Corona_H.png" />
+    <None Include="Resources\Corona_dp.png" />
+    <None Include="Resources\Corona_D2.png" />
+    <None Include="Resources\Corona_D1.png" />
+    <None Include="Resources\Corona_D.png" />
+    <None Include="Resources\Corona_b.png" />
+    <None Include="Resources\Corona_A.png" />
+    <None Include="Resources\Corona.png" />
+    <None Include="Resources\Corona1.PNG" />
+    <None Include="Resources\Rotor_n.png" />
+    <None Include="Resources\Rotor_ld.png" />
+    <None Include="Resources\Rotor_fv.png" />
+    <None Include="Resources\Rotor_di.png" />
+    <None Include="Resources\Rotor_de.png" />
+    <None Include="Resources\Rotor_c.png" />
+    <None Include="Resources\Rotor_ac.png" />
+    <None Include="Resources\Rotor_a.png" />
+    <None Include="Resources\Rotor_ri.png" />
+    <None Include="Resources\Rotor.PNG" />
+    <None Include="Resources\Corone.PNG" />
     <None Include="Resources\Stator_V.png" />
     <None Include="Resources\Stator_SA.png" />
     <None Include="Resources\Stator_RI.png" />
@@ -311,6 +352,9 @@
     <None Include="Resources\Stator_AC.png" />
     <None Include="Resources\Stator_A.png" />
     <None Include="Resources\Stator.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classi\Classi Rotore\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

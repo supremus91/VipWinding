@@ -93,6 +93,11 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.De = new System.Windows.Forms.ComboBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.QualitaLamiera = new System.Windows.Forms.ComboBox();
+            this.lb_Q = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AltezzaStatore = new System.Windows.Forms.ComboBox();
+            this.lb_H = new System.Windows.Forms.Label();
             this.TbxTolerance = new System.Windows.Forms.RichTextBox();
             this.lb_Tolleranza = new System.Windows.Forms.Label();
             this.Tolleranza = new System.Windows.Forms.ComboBox();
@@ -140,16 +145,11 @@
             this.ParGen = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btn_Nuovo = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Elimina = new Guna.UI2.WinForms.Guna2Button();
+            this.Stator_GridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.AltezzaStatore = new System.Windows.Forms.ComboBox();
-            this.lb_H = new System.Windows.Forms.Label();
-            this.QualitaLamiera = new System.Windows.Forms.ComboBox();
-            this.lb_Q = new System.Windows.Forms.Label();
             this.PartName = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.vipWindingsDBDataSet_Statore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vipWindingsDBDataSetStatoreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deBindingSource)).BeginInit();
@@ -173,9 +173,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.vBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1BindingSource)).BeginInit();
             this.ParGen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Stator_GridView)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Salva_DB
@@ -226,7 +226,7 @@
             this.Di.Name = "Di";
             this.Di.Size = new System.Drawing.Size(200, 23);
             this.Di.TabIndex = 17;
-            this.Di.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.Di.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.Di.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.Di.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -250,7 +250,7 @@
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(200, 23);
             this.A.TabIndex = 21;
-            this.A.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.A.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.A.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.A.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -286,7 +286,7 @@
             this.LC.Name = "LC";
             this.LC.Size = new System.Drawing.Size(200, 23);
             this.LC.TabIndex = 25;
-            this.LC.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.LC.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.LC.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.LC.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -310,7 +310,7 @@
             this.LS.Name = "LS";
             this.LS.Size = new System.Drawing.Size(200, 23);
             this.LS.TabIndex = 27;
-            this.LS.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.LS.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.LS.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.LS.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -334,7 +334,7 @@
             this.AC.Name = "AC";
             this.AC.Size = new System.Drawing.Size(200, 23);
             this.AC.TabIndex = 29;
-            this.AC.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.AC.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.AC.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.AC.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -358,7 +358,7 @@
             this.RI.Name = "RI";
             this.RI.Size = new System.Drawing.Size(200, 23);
             this.RI.TabIndex = 31;
-            this.RI.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.RI.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.RI.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.RI.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -382,7 +382,7 @@
             this.GR.Name = "GR";
             this.GR.Size = new System.Drawing.Size(200, 23);
             this.GR.TabIndex = 33;
-            this.GR.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.GR.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.GR.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.GR.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -406,7 +406,7 @@
             this.SA.Name = "SA";
             this.SA.Size = new System.Drawing.Size(200, 23);
             this.SA.TabIndex = 35;
-            this.SA.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.SA.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.SA.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.SA.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -430,7 +430,7 @@
             this.MT.Name = "MT";
             this.MT.Size = new System.Drawing.Size(200, 23);
             this.MT.TabIndex = 37;
-            this.MT.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.MT.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.MT.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.MT.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -454,7 +454,7 @@
             this.PT.Name = "PT";
             this.PT.Size = new System.Drawing.Size(200, 23);
             this.PT.TabIndex = 39;
-            this.PT.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.PT.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.PT.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.PT.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -478,7 +478,7 @@
             this.RF.Name = "RF";
             this.RF.Size = new System.Drawing.Size(200, 23);
             this.RF.TabIndex = 41;
-            this.RF.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.RF.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.RF.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.RF.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -502,7 +502,7 @@
             this.V.Name = "V";
             this.V.Size = new System.Drawing.Size(200, 23);
             this.V.TabIndex = 43;
-            this.V.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.V.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.V.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.V.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -769,7 +769,7 @@
             this.De.Name = "De";
             this.De.Size = new System.Drawing.Size(200, 23);
             this.De.TabIndex = 14;
-            this.De.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.De.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.De.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.De.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -848,12 +848,64 @@
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(2, 291);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(3, 291);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(441, 685);
             this.guna2GroupBox1.TabIndex = 151;
             this.guna2GroupBox1.Text = "Lamierino statore";
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(0, -10);
+            // 
+            // QualitaLamiera
+            // 
+            this.QualitaLamiera.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QualitaLamiera.FormattingEnabled = true;
+            this.QualitaLamiera.Location = new System.Drawing.Point(163, 148);
+            this.QualitaLamiera.Name = "QualitaLamiera";
+            this.QualitaLamiera.Size = new System.Drawing.Size(200, 23);
+            this.QualitaLamiera.TabIndex = 83;
+            // 
+            // lb_Q
+            // 
+            this.lb_Q.AutoSize = true;
+            this.lb_Q.BackColor = System.Drawing.Color.White;
+            this.lb_Q.ForeColor = System.Drawing.Color.Black;
+            this.lb_Q.Location = new System.Drawing.Point(5, 153);
+            this.lb_Q.Name = "lb_Q";
+            this.lb_Q.Size = new System.Drawing.Size(90, 15);
+            this.lb_Q.TabIndex = 84;
+            this.lb_Q.Text = "Qualità lamiera";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(367, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "[mm]";
+            // 
+            // AltezzaStatore
+            // 
+            this.AltezzaStatore.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AltezzaStatore.FormattingEnabled = true;
+            this.AltezzaStatore.Location = new System.Drawing.Point(163, 124);
+            this.AltezzaStatore.Name = "AltezzaStatore";
+            this.AltezzaStatore.Size = new System.Drawing.Size(200, 23);
+            this.AltezzaStatore.TabIndex = 80;
+            // 
+            // lb_H
+            // 
+            this.lb_H.AutoSize = true;
+            this.lb_H.BackColor = System.Drawing.Color.White;
+            this.lb_H.ForeColor = System.Drawing.Color.Black;
+            this.lb_H.Location = new System.Drawing.Point(5, 129);
+            this.lb_H.Name = "lb_H";
+            this.lb_H.Size = new System.Drawing.Size(91, 15);
+            this.lb_H.TabIndex = 81;
+            this.lb_H.Text = "Altezza statore";
             // 
             // TbxTolerance
             // 
@@ -1020,7 +1072,7 @@
             this.LD.Name = "LD";
             this.LD.Size = new System.Drawing.Size(200, 23);
             this.LD.TabIndex = 63;
-            this.LD.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.LD.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.LD.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.LD.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -1032,7 +1084,7 @@
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(200, 23);
             this.N.TabIndex = 62;
-            this.N.MouseEnter += new System.EventHandler(this.MouseHover);
+            this.N.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.N.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.N.MouseHover += new System.EventHandler(this.MouseHover);
             // 
@@ -1165,7 +1217,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ParGen.Controls.Add(this.btn_Nuovo);
             this.ParGen.Controls.Add(this.btn_Elimina);
-            this.ParGen.Controls.Add(this.Guna2DataGridView1);
+            this.ParGen.Controls.Add(this.Stator_GridView);
             this.ParGen.Controls.Add(this.Salva_DB);
             this.ParGen.Controls.Add(this.Guna2CircleButton1);
             this.ParGen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -1207,6 +1259,73 @@
             this.btn_Elimina.Text = "     Elimina";
             this.btn_Elimina.Click += new System.EventHandler(this.btn_Elimina_Click);
             // 
+            // Stator_GridView
+            // 
+            this.Stator_GridView.AllowUserToResizeColumns = false;
+            this.Stator_GridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Stator_GridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Stator_GridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Stator_GridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Stator_GridView.BackgroundColor = System.Drawing.Color.White;
+            this.Stator_GridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Stator_GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Stator_GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Stator_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Stator_GridView.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Stator_GridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Stator_GridView.EnableHeadersVisualStyles = false;
+            this.Stator_GridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Stator_GridView.Location = new System.Drawing.Point(4, 44);
+            this.Stator_GridView.Name = "Stator_GridView";
+            this.Stator_GridView.ReadOnly = true;
+            this.Stator_GridView.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            this.Stator_GridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.Stator_GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Stator_GridView.Size = new System.Drawing.Size(1573, 234);
+            this.Stator_GridView.TabIndex = 266;
+            this.Stator_GridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.Stator_GridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.Stator_GridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.Stator_GridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.Stator_GridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.Stator_GridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.Stator_GridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Stator_GridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Stator_GridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Stator_GridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.Stator_GridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.Stator_GridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.Stator_GridView.ThemeStyle.HeaderStyle.Height = 35;
+            this.Stator_GridView.ThemeStyle.ReadOnly = true;
+            this.Stator_GridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.Stator_GridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Stator_GridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.Stator_GridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Stator_GridView.ThemeStyle.RowsStyle.Height = 22;
+            this.Stator_GridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Stator_GridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Stator_GridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Stator_GridView_CellClick);
+            this.Stator_GridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Stator_GridView_CellContentDoubleClick);
+            this.Stator_GridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Stator_GridView_CellContentDoubleClick);
+            this.Stator_GridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Stator_GridView_KeyDown);
+            this.Stator_GridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Stator_GridView_KeyUp);
+            // 
             // Guna2CircleButton1
             // 
             this.Guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
@@ -1240,6 +1359,18 @@
             this.guna2GroupBox2.Text = "Legenda";
             this.guna2GroupBox2.TextOffset = new System.Drawing.Point(0, -10);
             // 
+            // PartName
+            // 
+            this.PartName.AutoSize = true;
+            this.PartName.BackColor = System.Drawing.Color.White;
+            this.PartName.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.PartName.ForeColor = System.Drawing.Color.Black;
+            this.PartName.Location = new System.Drawing.Point(4, 22);
+            this.PartName.Name = "PartName";
+            this.PartName.Size = new System.Drawing.Size(124, 54);
+            this.PartName.TabIndex = 47;
+            this.PartName.Text = "Parte";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1254,136 +1385,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // Guna2DataGridView1
-            // 
-            this.Guna2DataGridView1.AllowUserToResizeColumns = false;
-            this.Guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.Guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Guna2DataGridView1.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Guna2DataGridView1.EnableHeadersVisualStyles = false;
-            this.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.Guna2DataGridView1.Location = new System.Drawing.Point(4, 44);
-            this.Guna2DataGridView1.Name = "Guna2DataGridView1";
-            this.Guna2DataGridView1.ReadOnly = true;
-            this.Guna2DataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            this.Guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.Guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Guna2DataGridView1.Size = new System.Drawing.Size(1573, 234);
-            this.Guna2DataGridView1.TabIndex = 266;
-            this.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.Guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 35;
-            this.Guna2DataGridView1.ThemeStyle.ReadOnly = true;
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.Guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
-            this.Guna2DataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentDoubleClick);
-            this.Guna2DataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2DataGridView1_KeyDown);
-            this.Guna2DataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2DataGridView1_KeyUp);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(367, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "[mm]";
-            // 
-            // AltezzaStatore
-            // 
-            this.AltezzaStatore.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AltezzaStatore.FormattingEnabled = true;
-            this.AltezzaStatore.Location = new System.Drawing.Point(163, 124);
-            this.AltezzaStatore.Name = "AltezzaStatore";
-            this.AltezzaStatore.Size = new System.Drawing.Size(200, 23);
-            this.AltezzaStatore.TabIndex = 80;
-            // 
-            // lb_H
-            // 
-            this.lb_H.AutoSize = true;
-            this.lb_H.BackColor = System.Drawing.Color.White;
-            this.lb_H.ForeColor = System.Drawing.Color.Black;
-            this.lb_H.Location = new System.Drawing.Point(5, 129);
-            this.lb_H.Name = "lb_H";
-            this.lb_H.Size = new System.Drawing.Size(91, 15);
-            this.lb_H.TabIndex = 81;
-            this.lb_H.Text = "Altezza statore";
-            // 
-            // QualitaLamiera
-            // 
-            this.QualitaLamiera.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QualitaLamiera.FormattingEnabled = true;
-            this.QualitaLamiera.Location = new System.Drawing.Point(163, 148);
-            this.QualitaLamiera.Name = "QualitaLamiera";
-            this.QualitaLamiera.Size = new System.Drawing.Size(200, 23);
-            this.QualitaLamiera.TabIndex = 83;
-            // 
-            // lb_Q
-            // 
-            this.lb_Q.AutoSize = true;
-            this.lb_Q.BackColor = System.Drawing.Color.White;
-            this.lb_Q.ForeColor = System.Drawing.Color.Black;
-            this.lb_Q.Location = new System.Drawing.Point(5, 153);
-            this.lb_Q.Name = "lb_Q";
-            this.lb_Q.Size = new System.Drawing.Size(90, 15);
-            this.lb_Q.TabIndex = 84;
-            this.lb_Q.Text = "Qualità lamiera";
-            // 
-            // PartName
-            // 
-            this.PartName.AutoSize = true;
-            this.PartName.BackColor = System.Drawing.Color.White;
-            this.PartName.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.PartName.ForeColor = System.Drawing.Color.Black;
-            this.PartName.Location = new System.Drawing.Point(4, 22);
-            this.PartName.Name = "PartName";
-            this.PartName.Size = new System.Drawing.Size(124, 54);
-            this.PartName.TabIndex = 47;
-            this.PartName.Text = "Parte";
             // 
             // Stator
             // 
@@ -1420,10 +1421,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.vBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1BindingSource)).EndInit();
             this.ParGen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Stator_GridView)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1538,7 +1539,7 @@
         private System.Windows.Forms.Label lb_Tolleranza;
         private System.Windows.Forms.ComboBox Tolleranza;
         private System.Windows.Forms.RichTextBox TbxTolerance;
-        private Guna.UI2.WinForms.Guna2DataGridView Guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView Stator_GridView;
         private System.Windows.Forms.ComboBox QualitaLamiera;
         private System.Windows.Forms.Label lb_Q;
         private System.Windows.Forms.Label label1;

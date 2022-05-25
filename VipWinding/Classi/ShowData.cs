@@ -32,9 +32,6 @@ namespace VipWinding.Classi
             Gtab.DefaultCellStyle.SelectionBackColor = Color.FromArgb(29, 65, 127); ;
             Gtab.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            //Gtab.DefaultCellStyle.SelectionBackColor = Gtab.DefaultCellStyle.BackColor;
-            //Gtab.DefaultCellStyle.SelectionForeColor = Gtab.DefaultCellStyle.ForeColor;
-
             Gtab.Columns[0].HeaderCell.Value = "Data di creazione";
             Gtab.Columns[1].HeaderCell.Value = "ID";
             Gtab.Columns[2].HeaderCell.Value = "Codice Vip";
@@ -42,7 +39,7 @@ namespace VipWinding.Classi
             Gtab.Columns[4].HeaderCell.Value = "Part Number";
 
 
-            
+
             for (int i = 0; i <=4; i++)
             {
                 Gtab.Columns[i].HeaderCell.Style.Font = new Font("Segoe", 9.75F, FontStyle.Regular);
